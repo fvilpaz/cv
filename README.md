@@ -1,17 +1,31 @@
-# 🚀 Fernando Vilas Paz - Portfolio & CV
+# Fernando Vilas Paz — Interactive CV
 
-Un currículum interactivo y portfolio personal, diseñado y desarrollado desde cero utilizando tecnologías web estándar.
+Single-file HTML curriculum vitae with three interactive modes, built without frameworks.
 
-## 🛠️ Tecnologías utilizadas
-* **HTML5:** Estructura semántica.
-* **CSS3:** Maquetación con CSS Grid, Flexbox y Variables CSS.
-* **JavaScript (Vanilla):** Lógica para el cambio dinámico de tema.
+**Live →** [fvilpaz.github.io/cv](https://fvilpaz.github.io/cv)
 
-## ✨ Características destacadas
-* **Responsive Design:** Diseño fluido adaptable a móviles y escritorio.
-* **Modo Oscuro/Claro:** Implementado con JS, variables CSS e iconos SVG.
-* **Print-ready:** Reglas `@media print` optimizadas para exportar un PDF limpio de exactamente 3 páginas, sin elementos UI ni cabeceras del navegador.
+---
 
-## 👨‍💻 Sobre mí
-Tras años de experiencia en la gestión operativa y liderazgo de equipos en el sector servicios, actualmente enfoco mi carrera en el desarrollo de software a través del exigente Cursus de **42 Málaga**. 
+## Interactive features
 
+| Feature | How |
+|---------|-----|
+| **EN / ES language toggle** | JS — swaps all body text between English and Spanish |
+| **Dark / light mode** | JS + CSS custom properties — persists SVG icon state |
+| **PDF export** | `window.print()` with `@media print` rules tuned for exactly 3 clean pages |
+
+All three controls sit in a fixed bottom-right button bar. Buttons are hidden from the PDF output.
+
+## Stack
+
+| Layer | Tech |
+|-------|------|
+| Structure | HTML5 (semantic, single file) |
+| Style | CSS3 — Grid, Flexbox, custom properties, `@media print` |
+| Interactivity | Vanilla JS — no dependencies |
+| Fonts | Bricolage Grotesque + Geist Mono (Google Fonts) |
+| Hosting | GitHub Pages |
+
+## File
+
+Everything lives in `index.html` — including the profile photo as a base64 `data:` URI, so the CV is fully self-contained and works offline.
