@@ -617,6 +617,7 @@
     /* ──────────────── PRINT ──────────────── */
     @media print {
       @page {
+        size: A4 portrait;
         margin: 0;
       }
 
@@ -673,7 +674,7 @@
       }
     }
 
-    @media (max-width: 720px) {
+    @media screen and (max-width: 720px) {
       .header {
         grid-template-columns: 1fr 120px;
       }
