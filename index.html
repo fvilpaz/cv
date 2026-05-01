@@ -576,6 +576,7 @@
     }
 
     .btn-pdf,
+    .btn-lang,
     .btn-theme {
       background: var(--ink);
       color: var(--paper);
@@ -601,12 +602,14 @@
       height: 40px;
     }
 
-    .btn-pdf {
+    .btn-pdf,
+    .btn-lang {
       padding: 0 20px;
       height: 40px;
     }
 
     .btn-pdf:hover,
+    .btn-lang:hover,
     .btn-theme:hover {
       background: var(--blue);
     }
@@ -663,12 +666,6 @@
 
       .xp-item {
         margin-bottom: 24px;
-      }
-
-      /* Evitar cortes feos en bloques importantes al cambiar de página */
-      .proj, .proj-42, .cert, .sb-sec, .xp-item {
-        page-break-inside: avoid;
-        break-inside: avoid;
       }
 
       .floating-btns {
@@ -744,7 +741,10 @@
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
       </svg>
     </button>
-    <button class="btn-pdf" onclick="window.print()" title="Descargar PDF">
+    <button class="btn-lang" id="lang-btn" onclick="toggleLang()" title="Switch language">
+      <span id="lang-label">EN</span>
+    </button>
+        <button class="btn-pdf" onclick="window.print()" title="Descargar PDF">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -774,7 +774,9 @@
         <div class="header-available">Disponible · Presencial / Remoto</div>
       </div>
       <div class="header-right">
-        <img src="foto_perfil.jpeg" alt="Fernando Vilas Paz — Google I/O Connect Málaga" />
+        <img
+          src="foto_perfil.jpeg"
+          alt="Fernando Vilas Paz — Google I/O Connect Málaga" />
       </div>
     </div>
 
@@ -1021,22 +1023,191 @@
           </div>
         </div>
 
+        <div class="sb-sec">
+          <div class="sb-label">Idiomas</div>
+          <div class="lang-row"><span>Español</span><span>Nativo</span></div>
+          <div class="lang-row"><span>Inglés</span><span>C1 · Profesional</span></div>
+          <div class="lang-row"><span>Francés</span><span>Intermedio</span></div>
+        </div>
 
 
-    <div class="sb-sec">
-      <div class="sb-label">Idiomas</div>
-      <div class="lang-row"><span>Español</span><span>Nativo</span></div>
-      <div class="lang-row"><span>Inglés</span><span>C1 · Profesional</span></div>
-      <div class="lang-row"><span>Francés</span><span>Intermedio</span></div>
+
+      </aside>
     </div>
-
-
-
-    </aside>
-  </div>
   </div>
 
   <script>
+    const _t = {
+      es: {
+        contact_label:        'Contacto',
+        header_available:     'Disponible · Presencial / Remoto',
+        location:             'Málaga, España',
+        sec_proyectos:        'Proyectos',
+        proj_qreas_sub:       'Full Stack Developer · Startup de producto · 2026 – actualidad',
+        proj_qreas_p:         'Empresa de tecnología con ERP propio (Django 5.2 + React 19), servicios Odoo 19, apps móviles y agentes IA. Ciclo completo: consultoría, implementación, formación y soporte. Equipo de 5 personas con CTO y senior architect. Mi rol: desarrollo de módulos y herramientas internas en un entorno de producto real, con usuarios reales y stack moderno.',
+        proj_aury_sub:        'Beach club management · En producción · Google Cloud Run',
+        proj_aury_p:          'App en uso real por la Maître de un club de playa. Dashboard con clima en vivo, gestión completa de eventos (bodas, galas, graduaciones) con documentos adjuntos, editor visual de plano de mesas (Fabric.js), cuadrante semanal con drag & drop, checklists por espacio, agenda con dictado por voz, pedidos por punto de venta y 6 temas visuales. Middleware de autenticación personalizado y bloqueo automático tras intentos fallidos de login.',
+        proj_somer_sub:       'Control de bodega + IA · Meliá Hotels',
+        proj_somer_p:         'Gestión de stock de vinos con actualización en tiempo real por ventas, alertas por categoría, pedidos a proveedor vía email y análisis predictivo de reposición con Google Gemini. Importación masiva via Excel.',
+        proj_canitas_sub:     'Formación interna · Restaurante Estrella Michelin',
+        proj_canitas_p:       'Plataforma interactiva para el equipo de sala: carta, alérgenos, quizzes y certificación interna. Vanilla JS sin frameworks — diseñada con los constraints reales del cliente.',
+        proj_redondela_sub:   'Presencia digital · Sector automoción',
+        proj_redondela_p:     'Plataforma digital para negocio real: catálogo de servicios, captación de clientes y gestión de citas. Responsive, optimizado para conversión.',
+        proj_42_note:         '42 forma parte de mi historia, no de mi pasado. El modelo peer-to-peer y el trabajo sin tutoriales me enseñaron a descomponer problemas complejos en C — gestión de memoria, punteros, estructuras, señales UNIX, hardening de sistemas. Completé el Círculo 2 y tomé una decisión: había co-fundado una startup y tenía producto real que construir. El aprendizaje no paró.',
+        item_b2br_p:          'VM Linux endurecida con auditd, UFW, SSH y política de sudoers.',
+        item_libft_p:         'Reimplementación de la librería estándar de C desde cero.',
+        item_printf_p:        'Printf custom con funciones variádicas. Lector de ficheros con buffers estáticos.',
+        item_push_p:          'Comunicación entre procesos via señales UNIX. Ordenación de stacks con instrucciones optimizadas.',
+        bg_title:             'Sector servicios',
+        bg_date:              '2003 – actualidad',
+        bg_p:                 'Emigré a Londres con 19 años. Empecé desde cero como camarero y fui ascendiendo hasta roles de responsabilidad en establecimientos de lujo — Pepe Vieira (Estrella Michelin), Higuerón by Hilton, H10, Meliá. Ese recorrido me enseñó a gestionar equipos, resolver problemas bajo presión y entender operaciones complejas desde dentro. Hoy es el contexto donde nacen algunos de mis proyectos de software.',
+        sb_formacion:         'Formación',
+        cert_42_detail:       'Fundación Telefónica · C, sistemas, peer-to-peer',
+        badge_42:             'Círculo 2 completado',
+        cert_ifcd_detail:     'Módulos 1 y 2 ✓ · Módulo 3 en curso · Prácticas pendientes',
+        cert_cs50_detail:     'Introduction to Computer Science · C, memoria, punteros, SQL, Python',
+        cert_mouredev_detail: 'Java · Python · SQL · Git avanzado',
+        cert_google_name:     'Google: IA y Productividad',
+        cert_iabig_name:      'Desarrollo con IA',
+        cert_mobile_name:     'Desarrollo de Apps Móviles',
+        cert_mobile_detail:   'Universidad Complutense de Madrid · 2024',
+        cert_cyber_name:      'Ciberseguridad',
+        cert_english_name:    'C1 Inglés',
+        sb_idiomas:           'Idiomas',
+        lang_es_name:         'Español',
+        lang_es_level:        'Nativo',
+        lang_en_name:         'Inglés',
+        lang_en_level:        'C1 · Profesional',
+        lang_fr_name:         'Francés',
+        lang_fr_level:        'Intermedio',
+      },
+      en: {
+        contact_label:        'Contact',
+        header_available:     'Available · On-site / Remote',
+        location:             'Málaga, Spain',
+        sec_proyectos:        'Projects',
+        proj_qreas_sub:       'Full Stack Developer · Product startup · 2026 – present',
+        proj_qreas_p:         'Technology company with proprietary ERP (Django 5.2 + React 19), Odoo 19 services, mobile apps and AI agents. Full cycle: consulting, implementation, training and support. Team of 5 with CTO and senior architect. My role: module development and internal tooling in a real product environment, with real users and modern stack.',
+        proj_aury_sub:        'Beach club management · In production · Google Cloud Run',
+        proj_aury_p:          'App in real use by the Maître of a beach club. Live-weather dashboard, full event management (weddings, galas, graduations) with attached documents, visual floor plan editor (Fabric.js), weekly roster with drag & drop, per-space checklists, agenda with voice dictation, orders by point of sale and 6 visual themes. Custom authentication middleware and automatic lockout after failed login attempts.',
+        proj_somer_sub:       'Wine cellar management + AI · Meliá Hotels',
+        proj_somer_p:         'Wine stock management with real-time updates from sales, category alerts, supplier orders via email and predictive restocking analysis with Google Gemini. Bulk import via Excel.',
+        proj_canitas_sub:     'Internal training · Michelin Star Restaurant',
+        proj_canitas_p:       'Interactive platform for the floor team: menu, allergens, quizzes and internal certification. Vanilla JS without frameworks — designed around the client\'s real constraints.',
+        proj_redondela_sub:   'Digital presence · Automotive sector',
+        proj_redondela_p:     'Digital platform for a real business: service catalogue, lead generation and appointment management. Responsive, optimised for conversion.',
+        proj_42_note:         '42 is part of my story, not my past. The peer-to-peer model and tutorial-free work taught me to break down complex problems in C — memory management, pointers, data structures, UNIX signals, system hardening. I completed Circle 2 and made a decision: I had co-founded a startup and had a real product to build. The learning never stopped.',
+        item_b2br_p:          'Hardened Linux VM with auditd, UFW, SSH and sudoers policy.',
+        item_libft_p:         'Reimplementation of the C standard library from scratch.',
+        item_printf_p:        'Custom printf with variadic functions. File reader with static buffers.',
+        item_push_p:          'Inter-process communication via UNIX signals. Stack sorting with optimised instructions.',
+        bg_title:             'Service industry',
+        bg_date:              '2003 – present',
+        bg_p:                 'I moved to London at 19. I started from scratch as a waiter and worked my way up to senior roles in luxury establishments — Pepe Vieira (Michelin Star), Higuerón by Hilton, H10, Meliá. That journey taught me to manage teams, solve problems under pressure and understand complex operations from the inside. Today it\'s the context where some of my software projects are born.',
+        sb_formacion:         'Education',
+        cert_42_detail:       'Fundación Telefónica · C, systems, peer-to-peer',
+        badge_42:             'Circle 2 completed',
+        cert_ifcd_detail:     'Modules 1 & 2 ✓ · Module 3 in progress · Internship pending',
+        cert_cs50_detail:     'Introduction to Computer Science · C, memory, pointers, SQL, Python',
+        cert_mouredev_detail: 'Java · Python · SQL · Advanced Git',
+        cert_google_name:     'Google: AI and Productivity',
+        cert_iabig_name:      'AI Development',
+        cert_mobile_name:     'Mobile App Development',
+        cert_mobile_detail:   'Complutense University of Madrid · 2024',
+        cert_cyber_name:      'Cybersecurity',
+        cert_english_name:    'C1 English',
+        sb_idiomas:           'Languages',
+        lang_es_name:         'Spanish',
+        lang_es_level:        'Native',
+        lang_en_name:         'English',
+        lang_en_level:        'C1 · Professional',
+        lang_fr_name:         'French',
+        lang_fr_level:        'Intermediate',
+      }
+    };
+
+    let _lang = 'es';
+
+    function _sel(selector, idx) {
+      return document.querySelectorAll(selector)[idx] || null;
+    }
+
+    function _setText(el, text) {
+      if (el) el.textContent = text;
+    }
+
+    function applyLang(lang) {
+      const t = _t[lang];
+
+      // Header
+      _setText(_sel('.contact-label', 0),    t.contact_label);
+      _setText(_sel('.header-available', 0), t.header_available);
+
+      // Location text node (span > span.dot + text)
+      const locSpan = document.querySelector('.contact-links > span');
+      if (locSpan && locSpan.lastChild && locSpan.lastChild.nodeType === 3)
+        locSpan.lastChild.textContent = t.location;
+
+      // Projects
+      _setText(_sel('.sec-label', 0),  t.sec_proyectos);
+      _setText(_sel('.proj-sub', 0),   t.proj_qreas_sub);
+      _setText(_sel('.proj > p', 0),   t.proj_qreas_p);
+      _setText(_sel('.proj-sub', 1),   t.proj_aury_sub);
+      _setText(_sel('.proj > p', 1),   t.proj_aury_p);
+      _setText(_sel('.proj-sub', 2),   t.proj_somer_sub);
+      _setText(_sel('.proj > p', 2),   t.proj_somer_p);
+      _setText(_sel('.proj-sub', 3),   t.proj_canitas_sub);
+      _setText(_sel('.proj > p', 3),   t.proj_canitas_p);
+      _setText(_sel('.proj-sub', 4),   t.proj_redondela_sub);
+      _setText(_sel('.proj > p', 4),   t.proj_redondela_p);
+      _setText(_sel('.proj-note', 0),  t.proj_42_note);
+      _setText(_sel('.item-42 p', 0),  t.item_b2br_p);
+      _setText(_sel('.item-42 p', 1),  t.item_libft_p);
+      _setText(_sel('.item-42 p', 2),  t.item_printf_p);
+      _setText(_sel('.item-42 p', 3),  t.item_push_p);
+
+      // Background
+      _setText(_sel('.xp-title', 0),  t.bg_title);
+      _setText(_sel('.xp-date', 0),   t.bg_date);
+      _setText(_sel('.xp p', 0),      t.bg_p);
+
+      // Sidebar – Education
+      _setText(_sel('.sb-label', 1),        t.sb_formacion);
+      _setText(_sel('.cert-detail', 0),     t.cert_42_detail);
+      document.querySelectorAll('.badge.done').forEach((el, i) => {
+        el.textContent = i === 0 ? t.badge_42 : (lang === 'en' ? '✓ Completed' : '✓ Completado');
+      });
+      document.querySelectorAll('.badge.wip').forEach(el => el.textContent = lang === 'en' ? 'In progress' : 'En curso');
+      _setText(_sel('.cert-detail', 1),     t.cert_ifcd_detail);
+      _setText(_sel('.cert-detail', 2),     t.cert_cs50_detail);
+      _setText(_sel('.cert-detail', 3),     t.cert_mouredev_detail);
+      _setText(_sel('.cert-name', 4),       t.cert_google_name);
+      _setText(_sel('.cert-name', 5),       t.cert_iabig_name);
+      _setText(_sel('.cert-name', 6),       t.cert_mobile_name);
+      _setText(_sel('.cert-detail', 6),     t.cert_mobile_detail);
+      _setText(_sel('.cert-name', 7),       t.cert_cyber_name);
+      _setText(_sel('.cert-name', 8),       t.cert_english_name);
+
+      // Sidebar – Languages
+      _setText(_sel('.sb-label', 2),        t.sb_idiomas);
+      const langSpans = document.querySelectorAll('.lang-row span');
+      _setText(langSpans[0], t.lang_es_name);
+      _setText(langSpans[1], t.lang_es_level);
+      _setText(langSpans[2], t.lang_en_name);
+      _setText(langSpans[3], t.lang_en_level);
+      _setText(langSpans[4], t.lang_fr_name);
+      _setText(langSpans[5], t.lang_fr_level);
+
+      // Update html lang attr and button label
+      document.documentElement.lang = lang;
+      document.getElementById('lang-label').textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+
+    function toggleLang() {
+      _lang = _lang === 'es' ? 'en' : 'es';
+      applyLang(_lang);
+    }
+
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
       const isDark = document.body.classList.contains('dark-mode');
