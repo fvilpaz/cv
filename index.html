@@ -835,6 +835,22 @@
 
           <div class="proj">
             <div class="proj-top">
+              <span class="proj-name">MasterMind</span>
+              <div class="proj-links">
+                <a href="https://fv-mastermind.com" target="_blank">Live ↗</a>
+                <a href="https://github.com/fvilpaz/MasterMind" target="_blank">GitHub ↗</a>
+              </div>
+            </div>
+            <div class="proj-sub">Entrenador IA personal · CS50 · Google Cloud Run</div>
+            <p>Tutor de IA construido sobre Gemini y Claude que guía al estudiante a través de CS50 con progresión obligatoria: vídeo → lecture notes → ejercicios → problem set. Sesiones con pomodoros, perfil de progreso, modo invitado y sistema de login de dos pasos. Desplegado en Cloud Run con dominio propio y Cloudflare.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Gemini AI</span>
+              <span class="chip">Claude API</span><span class="chip">Google Cloud Run</span><span class="chip">Cloudflare</span>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-top">
               <span class="proj-name">AuryApp</span>
               <div class="proj-links">
                 <a href="https://github.com/fvilpaz/auryapp" target="_blank">GitHub ↗</a>
@@ -1067,6 +1083,8 @@
         sec_proyectos: 'Proyectos',
         proj_qreas_sub: 'Full Stack Developer · Startup de producto · 2026 – actualidad',
         proj_qreas_p: 'Servicios de tecnología con ERP propio (Django 5.2 + React 19), Odoo, apps móviles y agentes IA. Ciclo completo: consultoría, implementación, formación y soporte. Equipo de 5 personas con CTO y senior architect. Mi rol: desarrollo de módulos y herramientas internas en un entorno de producto real, con usuarios reales y stack moderno.',
+        proj_mm_sub: 'Entrenador IA personal · CS50 · Google Cloud Run',
+        proj_mm_p: 'Tutor de IA construido sobre Gemini y Claude que guía al estudiante a través de CS50 con progresión obligatoria: vídeo → lecture notes → ejercicios → problem set. Sesiones con pomodoros, perfil de progreso, modo invitado y sistema de login de dos pasos. Desplegado en Cloud Run con dominio propio y Cloudflare.',
         proj_aury_sub: 'Beach club management · En producción · Google Cloud Run',
         proj_aury_p: 'App en uso real por la Maître de un club de playa. Dashboard con clima en vivo, gestión completa de eventos (bodas, galas, graduaciones) con documentos adjuntos, editor visual de plano de mesas (Fabric.js), cuadrante semanal con drag & drop, checklists por espacio, agenda con dictado por voz, pedidos por punto de venta y 6 temas visuales. Middleware de autenticación personalizado y bloqueo automático tras intentos fallidos de login.',
         proj_somer_sub: 'Control de bodega + IA · Meliá Hotels',
@@ -1110,6 +1128,8 @@
         sec_proyectos: 'Projects',
         proj_qreas_sub: 'Full Stack Developer · Product startup · 2026 – present',
         proj_qreas_p: `Providing end-to-end technology services featuring a proprietary ERP (Django 5.2 + React 19), Odoo, mobile apps, and AI agents. Full cycle: consulting, implementation, training, and support. Leading a team of 5 with a CTO and Senior Architect, my role focuses on module development and internal tooling in a production environment with real users and a modern stack.`,
+        proj_mm_sub: 'Personal AI trainer · CS50 · Google Cloud Run',
+        proj_mm_p: 'AI tutor built on Gemini and Claude that guides students through CS50 with enforced progression: video → lecture notes → exercises → problem set. Pomodoro sessions, progress profile, guest mode and two-step login. Deployed on Cloud Run with custom domain and Cloudflare.',
         proj_aury_sub: 'Beach club management · In production · Google Cloud Run',
         proj_aury_p: 'App in real use by the Maître of a beach club. Live-weather dashboard, full event management (weddings, galas, graduations) with attached documents, visual floor plan editor (Fabric.js), weekly roster with drag & drop, per-space checklists, agenda with voice dictation, orders by point of sale and 6 visual themes. Custom authentication middleware and automatic lockout after failed login attempts.',
         proj_somer_sub: 'Wine cellar management + AI · Meliá Hotels',
@@ -1174,14 +1194,16 @@
       _setText(_sel('.sec-label', 0), t.sec_proyectos);
       _setText(_sel('.proj-sub', 0), t.proj_qreas_sub);
       _setText(_sel('.proj > p', 0), t.proj_qreas_p);
-      _setText(_sel('.proj-sub', 1), t.proj_aury_sub);
-      _setText(_sel('.proj > p', 1), t.proj_aury_p);
-      _setText(_sel('.proj-sub', 2), t.proj_somer_sub);
-      _setText(_sel('.proj > p', 2), t.proj_somer_p);
-      _setText(_sel('.proj-sub', 3), t.proj_canitas_sub);
-      _setText(_sel('.proj > p', 3), t.proj_canitas_p);
-      _setText(_sel('.proj-sub', 4), t.proj_redondela_sub);
-      _setText(_sel('.proj > p', 4), t.proj_redondela_p);
+      _setText(_sel('.proj-sub', 1), t.proj_mm_sub);
+      _setText(_sel('.proj > p', 1), t.proj_mm_p);
+      _setText(_sel('.proj-sub', 2), t.proj_aury_sub);
+      _setText(_sel('.proj > p', 2), t.proj_aury_p);
+      _setText(_sel('.proj-sub', 3), t.proj_somer_sub);
+      _setText(_sel('.proj > p', 3), t.proj_somer_p);
+      _setText(_sel('.proj-sub', 4), t.proj_canitas_sub);
+      _setText(_sel('.proj > p', 4), t.proj_canitas_p);
+      _setText(_sel('.proj-sub', 5), t.proj_redondela_sub);
+      _setText(_sel('.proj > p', 5), t.proj_redondela_p);
       _setText(_sel('.proj-note', 0), t.proj_42_note);
       _setText(_sel('.item-42 p', 0), t.item_b2br_p);
       _setText(_sel('.item-42 p', 1), t.item_libft_p);
