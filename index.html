@@ -692,6 +692,15 @@
     }
 
     @media screen and (max-width: 720px) {
+      .floating-btns {
+        flex-direction: row;
+        right: auto;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: .75;
+      }
+
       .header {
         grid-template-columns: 1fr 120px;
       }
