@@ -691,7 +691,8 @@
       }
     }
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: 720px),
+           screen and (max-height: 500px) and (orientation: landscape) {
       .floating-btns {
         flex-direction: row;
         right: auto;
