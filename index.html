@@ -20,7 +20,7 @@
       --sage: #2a7a4b;
       --yellow: #f0c530;
       --bg-contact: #fafafa;
-      --bg-sidebar: #f5f4f0;
+      --bg-sidebar: #edebe6;
       --text-p: #4a5060;
       --badge-done-bg: #dcfce7;
       --badge-done-text: var(--sage);
@@ -208,6 +208,15 @@
       background: var(--rule);
     }
 
+    /* ──────────────── PERFIL ──────────────── */
+    .perfil-text {
+      font-size: .92rem;
+      color: var(--text-p);
+      line-height: 1.75;
+      border-left: 3px solid var(--blue);
+      padding-left: 20px;
+    }
+
     /* ──────────────── PROJECT CARDS ──────────────── */
     .proj {
       margin-bottom: 32px;
@@ -362,7 +371,7 @@
     .xp-where {
       font-family: 'Geist Mono', monospace;
       font-size: .7rem;
-      color: var(--muted);
+      color: var(--rust);
       margin-bottom: 6px;
     }
 
@@ -590,7 +599,7 @@
       letter-spacing: .06em;
       text-transform: uppercase;
       cursor: pointer;
-      outline: 2px solid var(--yellow);
+      outline: 2px solid var(--blue);
       outline-offset: -1px;
       transition: background .15s, outline-color .15s;
       display: flex;
@@ -825,6 +834,12 @@
 
       <!-- MAIN -->
       <main class="main">
+
+        <!-- PERFIL -->
+        <section class="sec">
+          <div class="sec-label">Perfil</div>
+          <p class="perfil-text">Desarrollador Full Stack con formación en 42 Málaga y CS50 Harvard. Especializado en Python, Django y herramientas a medida para entornos reales. Más de 20 años en hostelería de lujo me dieron el contexto operativo donde nacen mis proyectos.</p>
+        </section>
 
         <!-- PROYECTOS -->
         <section class="sec">
@@ -1092,6 +1107,8 @@
         contact_label: 'Contacto',
         header_available: 'Disponible · Presencial / Remoto',
         location: 'Málaga, España',
+        sec_perfil: 'Perfil',
+        perfil_p: 'Desarrollador Full Stack con formación en 42 Málaga y CS50 Harvard. Especializado en Python, Django y herramientas a medida para entornos reales. Más de 20 años en hostelería de lujo me dieron el contexto operativo donde nacen mis proyectos.',
         sec_proyectos: 'Proyectos',
         proj_freelance_name: 'Desarrollador Full Stack Freelance',
         proj_qreas_sub: 'Full Stack Developer · Soluciones a medida · 2024 – actualidad',
@@ -1139,6 +1156,8 @@
         contact_label: 'Contact',
         header_available: 'Available · On-site / Remote',
         location: 'Málaga, Spain',
+        sec_perfil: 'Profile',
+        perfil_p: 'Full Stack Developer trained at 42 Málaga and CS50 Harvard. Specialised in Python, Django and custom tools for real-world environments. 20+ years in high-end hospitality gave me the operational context where my projects are born.',
         sec_proyectos: 'Projects',
         proj_freelance_name: 'Freelance Full Stack Developer',
         proj_qreas_sub: 'Full Stack Developer · Custom solutions · 2024 – present',
@@ -1206,8 +1225,12 @@
       if (locSpan && locSpan.lastChild && locSpan.lastChild.nodeType === 3)
         locSpan.lastChild.textContent = t.location;
 
+      // Perfil
+      _setText(_sel('.sec-label', 0), t.sec_perfil);
+      _setText(_sel('.perfil-text', 0), t.perfil_p);
+
       // Projects
-      _setText(_sel('.sec-label', 0), t.sec_proyectos);
+      _setText(_sel('.sec-label', 1), t.sec_proyectos);
       _setText(_sel('.proj-name', 0), t.proj_freelance_name);
       _setText(_sel('.proj-sub', 0), t.proj_qreas_sub);
       _setText(_sel('.proj > p', 0), t.proj_qreas_p);
@@ -1228,7 +1251,7 @@
       _setText(_sel('.item-42 p', 3), t.item_push_p);
 
       // Background section label
-      _setText(_sel('.sec-label', 1), t.sec_background);
+      _setText(_sel('.sec-label', 2), t.sec_background);
 
       // Background
       _setText(_sel('.xp-title', 0), t.bg_title);
