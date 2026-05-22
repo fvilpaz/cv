@@ -612,7 +612,10 @@
         margin: 0;
       }
 
-      body {
+      html, body {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
         background: #fff;
       }
 
@@ -621,7 +624,6 @@
         print-color-adjust: exact !important;
       }
 
-      /* Forzar modo claro al imprimir */
       body.dark-mode {
         --ink: #111318;
         --paper: #fafaf8;
@@ -647,6 +649,27 @@
         box-shadow: none;
       }
 
+      .body {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      .main {
+        display: table-cell;
+        width: auto;
+        padding: 24px 40px;
+        vertical-align: top;
+      }
+
+      .sidebar {
+        display: table-cell;
+        width: 260px;
+        padding: 24px 30px;
+        vertical-align: top;
+        background: var(--bg-sidebar);
+      }
+
       /* Ajustes conservadores de espaciado vertical para ganar ~7 líneas exactas */
       .header-name, .header-contact {
         padding-top: 16px;
@@ -655,14 +678,6 @@
 
       .header-name .name {
         font-size: 2.8rem;
-      }
-
-      .main {
-        padding: 24px 40px;
-      }
-
-      .sidebar {
-        padding: 24px 30px;
       }
 
       .sec {
