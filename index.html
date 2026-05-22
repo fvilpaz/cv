@@ -833,9 +833,7 @@
 <div class="proj">
   <div class="proj-top">
     <span class="proj-name">Desarrollador Full Stack Freelance</span>
-    <div class="proj-links">
-       <!-- <a href="https://tu-portfolio.com" target="_blank">Proyectos ↗</a> -->
-    </div>
+    <div class="proj-links"></div>
   </div>
   <div class="proj-sub">Full Stack Developer · Soluciones a medida · 2024 – actualidad</div>
   <p>Servicios de desarrollo de software integral: desde consultoría técnica hasta implementación y soporte. Especializado en la creación de herramientas de automatización, módulos ERP y aplicaciones con IA integrada. Desarrollo de interfaces modernas y robustas para optimizar procesos operativos en entornos de negocio reales.</p>
@@ -965,7 +963,7 @@
 
         <!-- BACKGROUND -->
         <section class="sec">
-          <div class="sec-label">Background</div>
+          <div class="sec-label">Trayectoria</div>
 
           <div class="xp">
             <div class="xp-row">
@@ -1095,8 +1093,9 @@
         header_available: 'Disponible · Presencial / Remoto',
         location: 'Málaga, España',
         sec_proyectos: 'Proyectos',
-        proj_qreas_sub: 'Full Stack Developer · Startup de producto · 2026 – actualidad',
-        proj_qreas_p: 'Servicios de tecnología con ERP propio (Django 5.2 + React 19), Odoo, apps móviles y agentes IA. Ciclo completo: consultoría, implementación, formación y soporte. Equipo de 5 personas con CTO y senior architect. Mi rol: desarrollo de módulos y herramientas internas en un entorno de producto real, con usuarios reales y stack moderno.',
+        proj_freelance_name: 'Desarrollador Full Stack Freelance',
+        proj_qreas_sub: 'Full Stack Developer · Soluciones a medida · 2024 – actualidad',
+        proj_qreas_p: 'Servicios de desarrollo de software integral: desde consultoría técnica hasta implementación y soporte. Especializado en la creación de herramientas de automatización, módulos ERP y aplicaciones con IA integrada. Desarrollo de interfaces modernas y robustas para optimizar procesos operativos en entornos de negocio reales.',
         proj_mm_sub: 'Plataforma de aprendizaje con IA · Modular · Google Cloud Run',
         proj_mm_p: 'Agente tutor construido sobre Gemini y Claude con arquitectura de cursos intercambiables: cada materia tiene su propio agente especializado. Actualmente lo uso para mi propia formación (CS50, MoureDev, 42, Google), pero el sistema está diseñado para escalar a cualquier contenido o estudiante. Login en dos pasos, modo invitado, sesiones con pomodoros y progresión adaptativa.',
         proj_aury_sub: 'Beach club management · En producción · Google Cloud Run',
@@ -1112,6 +1111,7 @@
         item_libft_p: 'Reimplementación de la librería estándar de C desde cero.',
         item_printf_p: 'Printf custom con funciones variádicas. Lector de ficheros con buffers estáticos.',
         item_push_p: 'Comunicación entre procesos via señales UNIX. Ordenación de stacks con instrucciones optimizadas.',
+        sec_background: 'Trayectoria',
         bg_title: 'Sector servicios',
         bg_date: '2003 – actualidad',
         bg_p: 'Emigré a Londres con 19 años. Empecé desde cero como camarero y fui ascendiendo hasta roles de responsabilidad en establecimientos de lujo: Pepe Vieira (Estrella Michelin), Higuerón by Hilton, H10, Meliá. Ese recorrido me enseñó a gestionar equipos, resolver problemas bajo presión y entender operaciones complejas desde dentro. Hoy es el contexto donde nacen algunos de mis proyectos de software.',
@@ -1140,8 +1140,9 @@
         header_available: 'Available · On-site / Remote',
         location: 'Málaga, Spain',
         sec_proyectos: 'Projects',
-        proj_qreas_sub: 'Full Stack Developer · Product startup · 2026 – present',
-        proj_qreas_p: `Providing end-to-end technology services featuring a proprietary ERP (Django 5.2 + React 19), Odoo, mobile apps, and AI agents. Full cycle: consulting, implementation, training, and support. Leading a team of 5 with a CTO and Senior Architect, my role focuses on module development and internal tooling in a production environment with real users and a modern stack.`,
+        proj_freelance_name: 'Freelance Full Stack Developer',
+        proj_qreas_sub: 'Full Stack Developer · Custom solutions · 2024 – present',
+        proj_qreas_p: 'End-to-end software development services: from technical consultancy to implementation and ongoing support. Specialised in automation tooling, ERP modules and AI-integrated applications. Building modern, robust interfaces to streamline operational processes in real business environments.',
         proj_mm_sub: 'AI learning platform · Modular · Google Cloud Run',
         proj_mm_p: 'Tutor agent built on Gemini and Claude with a swappable course architecture: each subject has its own specialised agent. Currently using it for my own learning (CS50, MoureDev, 42, Google paths), but the system is designed to scale to any content or student. Two-step login, guest mode, pomodoro sessions and adaptive progression.',
         proj_aury_sub: 'Beach club management · In production · Google Cloud Run',
@@ -1157,6 +1158,7 @@
         item_libft_p: 'Reimplementation of the C standard library from scratch.',
         item_printf_p: 'Custom printf with variadic functions. File reader with static buffers.',
         item_push_p: 'Inter-process communication via UNIX signals. Stack sorting with optimised instructions.',
+        sec_background: 'Background',
         bg_title: 'Service industry',
         bg_date: '2003 – present',
         bg_p: 'I moved to London at 19. I started from scratch as a waiter and worked my way up to senior roles in luxury establishments: Pepe Vieira (Michelin Star), Higuerón by Hilton, H10, Meliá. That journey taught me to manage teams, solve problems under pressure and understand complex operations from the inside. Today it\'s the context where some of my software projects are born.',
@@ -1206,6 +1208,7 @@
 
       // Projects
       _setText(_sel('.sec-label', 0), t.sec_proyectos);
+      _setText(_sel('.proj-name', 0), t.proj_freelance_name);
       _setText(_sel('.proj-sub', 0), t.proj_qreas_sub);
       _setText(_sel('.proj > p', 0), t.proj_qreas_p);
       _setText(_sel('.proj-sub', 1), t.proj_mm_sub);
@@ -1223,6 +1226,9 @@
       _setText(_sel('.item-42 p', 1), t.item_libft_p);
       _setText(_sel('.item-42 p', 2), t.item_printf_p);
       _setText(_sel('.item-42 p', 3), t.item_push_p);
+
+      // Background section label
+      _setText(_sel('.sec-label', 1), t.sec_background);
 
       // Background
       _setText(_sel('.xp-title', 0), t.bg_title);
