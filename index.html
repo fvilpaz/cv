@@ -448,6 +448,10 @@
       background: #121011;
     }
 
+    body.dark-mode .stag-bash {
+      border: 1px solid #444;
+    }
+
     .stag-linux {
       background: #333;
     }
@@ -512,6 +516,10 @@
 
     .stag-42 {
       background: #000000;
+    }
+
+    body.dark-mode .stag-42 {
+      border: 1px solid #444;
     }
 
     .stag-upwork {
@@ -637,6 +645,22 @@
     .btn-theme:hover {
       background: var(--blue);
       outline-color: var(--blue);
+    }
+
+    /* Dark mode button adjustments */
+    body.dark-mode .btn-pdf,
+    body.dark-mode .btn-lang,
+    body.dark-mode .btn-theme {
+      background: #5b7cfa;
+      color: #fafaf8;
+      outline-color: #5b7cfa;
+    }
+
+    body.dark-mode .btn-pdf:hover,
+    body.dark-mode .btn-lang:hover,
+    body.dark-mode .btn-theme:hover {
+      background: #7b92ff;
+      outline-color: #7b92ff;
     }
 
     /* ──────────────── PRINT ──────────────── */
