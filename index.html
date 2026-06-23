@@ -4,15 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fernando Vilas Paz — Full Stack Developer. 42 Málaga, CS50 Harvard. Python, Django, React, TypeScript. Especialista en automatización ERP y soluciones de negocio para hostelería.">
-  <meta name="keywords" content="Full Stack Developer, Python, Django, React, TypeScript, Freelance, Upwork, Fiverr, ERP, Automatización">
+  <title>Fernando Vilas Paz — Full Stack Developer</title>
+
+  <!-- Favicon: iniciales FV en el azul del CV (SVG embebido, sin archivos externos) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232044c9'/%3E%3Ctext x='32' y='44' font-family='Arial, Helvetica, sans-serif' font-size='30' font-weight='bold' letter-spacing='-1' fill='%23ffffff' text-anchor='middle'%3EFV%3C/text%3E%3C/svg%3E">
+
+  <!-- ──────────────── SEO ──────────────── -->
+  <meta name="description"
+    content="Fernando Vilas Paz — Desarrollador Full Stack (Python, Django, React, TypeScript). Conocimiento real del negocio de hostelería + automatización y soluciones ERP. Formado en 42 Málaga y CS50 (Harvard). Disponible para proyectos freelance.">
+  <meta name="keywords"
+    content="Full Stack Developer, Python, Django, React, TypeScript, PostgreSQL, Docker, Freelance, Upwork, Fiverr, Malt, ERP, automatización, hostelería, Málaga, 42 Málaga, CS50">
   <meta name="author" content="Fernando Vilas Paz">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Fernando Vilas Paz — Full Stack Developer">
-  <meta property="og:description" content="Desarrollador Full Stack. Especializado en Python, Django, React, automatización y soluciones ERP. Disponible para proyectos freelance.">
+  <meta name="theme-color" content="#2044c9">
+  <link rel="canonical" href="https://fvilpaz.github.io/cv/">
+
+  <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
   <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://github.com/fvilpaz/cv">
-  <title>Fernando Vilas Paz</title>
+  <meta property="og:title" content="Fernando Vilas Paz — Full Stack Developer">
+  <meta property="og:description"
+    content="Desarrollador Full Stack: Python, Django, React. Conozco el negocio de hostelería desde dentro y construyo automatización y ERP. Disponible para proyectos freelance.">
+  <meta property="og:image" content="https://fvilpaz.github.io/cv/foto_perfil.jpeg">
+  <meta property="og:url" content="https://fvilpaz.github.io/cv/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="profile:first_name" content="Fernando">
+  <meta property="profile:last_name" content="Vilas Paz">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fernando Vilas Paz — Full Stack Developer">
+  <meta name="twitter:description"
+    content="Desarrollador Full Stack: Python, Django, React. Automatización y ERP para hostelería. Disponible para proyectos freelance.">
+  <meta name="twitter:image" content="https://fvilpaz.github.io/cv/foto_perfil.jpeg">
+
+  <!-- Datos estructurados para Google (Schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fernando Vilas Paz",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://fvilpaz.github.io/cv/",
+    "image": "https://fvilpaz.github.io/cv/foto_perfil.jpeg",
+    "email": "mailto:fvilpaz@gmail.com",
+    "sameAs": [
+      "https://github.com/fvilpaz",
+      "https://linkedin.com/in/fernando-vilas-paz-1626901a9",
+      "https://www.malt.es/profile/fernandovilaspaz"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Málaga",
+      "addressCountry": "ES"
+    },
+    "knowsLanguage": ["es", "en", "fr"],
+    "knowsAbout": ["Python", "Django", "React", "TypeScript", "PostgreSQL", "Docker", "Automatización", "ERP", "Hostelería"]
+  }
+  </script>
+  <!-- ──────────────── /SEO ──────────────── -->
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Geist+Mono:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -105,6 +155,15 @@
 
     .header-name .name-accent {
       color: var(--blue);
+    }
+
+    .header-name .tagline {
+      font-family: 'Geist Mono', monospace;
+      font-size: .68rem;
+      color: var(--muted);
+      letter-spacing: .04em;
+      margin-top: 16px;
+      line-height: 1.55;
     }
 
     .header-contact {
@@ -440,16 +499,18 @@
       letter-spacing: .03em;
     }
 
+    /* Borde sutil en modo oscuro para que ningún badge se funda con el fondo */
+    body.dark-mode .stag,
+    body.dark-mode .badge {
+      border: 1px solid rgba(255, 255, 255, .25);
+    }
+
     .stag-c {
       background: #00599C;
     }
 
     .stag-bash {
       background: #121011;
-    }
-
-    body.dark-mode .stag-bash {
-      border: 1px solid #444;
     }
 
     .stag-linux {
@@ -518,16 +579,16 @@
       background: #000000;
     }
 
-    body.dark-mode .stag-42 {
-      border: 1px solid #444;
-    }
-
     .stag-upwork {
       background: #14A800;
     }
 
     .stag-fiverr {
       background: #1DBF73;
+    }
+
+    .stag-malt {
+      background: #FC5757;
     }
 
     .cert {
@@ -862,17 +923,18 @@
     <div class="header">
       <div class="header-name">
         <div class="name">Fernando<br><span class="name-accent">Vilas Paz</span></div>
+        <div class="tagline" data-i18n="tagline">Desarrollador Full Stack · Python · Django · React · Automatización para hostelería</div>
       </div>
       <div class="header-contact">
-        <div class="contact-label">Contacto</div>
+        <div class="contact-label" data-i18n="contact_label">Contacto</div>
         <div class="contact-links">
           <a href="mailto:fvilpaz@gmail.com"><span class="dot"></span>fvilpaz@gmail.com</a>
           <a href="https://github.com/fvilpaz" target="_blank"><span class="dot"></span>github.com/fvilpaz</a>
           <a href="https://linkedin.com/in/fernando-vilas-paz-1626901a9" target="_blank"><span
               class="dot"></span>LinkedIn</a>
-          <span><span class="dot"></span>Málaga, España</span>
+          <span><span class="dot"></span><span data-i18n="location">Málaga, España</span></span>
         </div>
-        <div class="header-available">Disponible · Presencial / Remoto</div>
+        <div class="header-available" data-i18n="header_available">Disponible · Presencial / Remoto</div>
       </div>
       <div class="header-right">
         <img src="foto_perfil.jpeg" alt="Fernando Vilas Paz — Google I/O Connect Málaga" />
@@ -887,26 +949,39 @@
 
         <!-- PERFIL -->
         <section class="sec">
-          <div class="sec-label">Perfil</div>
-          <p class="perfil-text">Desarrollador Full Stack con formación en 42 Málaga y CS50 Harvard. Orientado a construir herramientas funcionales en entornos reales, con capacidad de adaptación a distintos stacks y contextos. Mentalidad de aprendizaje continuo y experiencia llevando proyectos de la idea a producción.</p>
+          <div class="sec-label" data-i18n="sec_perfil">Perfil</div>
+          <p class="perfil-text" data-i18n="perfil_p">Desarrollador Full Stack con más de 20 años previos en hostelería, parte en establecimientos de alto nivel: un sector que conozco desde dentro y que me permite construir software que resuelve problemas reales del negocio, no solo código. Trabajo con Python, Django, React y TypeScript, con la IA integrada en mi flujo de desarrollo. Formado en 42 Málaga y CS50 (Harvard). Disponible para proyectos freelance, de la idea a producción.</p>
         </section>
 
         <!-- PROYECTOS -->
         <section class="sec">
-          <div class="sec-label">Proyectos</div>
+          <div class="sec-label" data-i18n="sec_proyectos">Proyectos</div>
 
 <div class="proj">
   <div class="proj-top">
-    <span class="proj-name">Desarrollador Full Stack Freelance</span>
+    <span class="proj-name" data-i18n="proj_freelance_name">Desarrollador Full Stack Freelance</span>
     <div class="proj-links"></div>
   </div>
-  <div class="proj-sub">Full Stack Developer · Soluciones a medida · 2024 – actualidad</div>
-  <p>Servicios de desarrollo de software integral: desde consultoría técnica hasta implementación y soporte. Especializado en la creación de herramientas de automatización, módulos ERP y aplicaciones con IA integrada. Desarrollo de interfaces modernas y robustas para optimizar procesos operativos en entornos de negocio reales.</p>
+  <div class="proj-sub" data-i18n="proj_qreas_sub">Full Stack Developer · Soluciones a medida · 2024 – actualidad</div>
+  <p data-i18n="proj_qreas_p">Servicios de desarrollo de software integral: desde consultoría técnica hasta implementación y soporte. Especializado en la creación de herramientas de automatización, módulos ERP y aplicaciones con IA integrada. Desarrollo de interfaces modernas y robustas para optimizar procesos operativos en entornos de negocio reales.</p>
   <div class="chips">
     <span class="chip">Python</span><span class="chip">Django 5.2</span><span class="chip">React 19</span><span class="chip">TypeScript</span>
     <span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">Celery</span><span class="chip">Capacitor</span>
   </div>
 </div>
+
+          <div class="proj">
+            <div class="proj-top">
+              <span class="proj-name" data-i18n="proj_erp_name">ERP para hostelería</span>
+              <div class="proj-links"></div>
+            </div>
+            <div class="proj-sub" data-i18n="proj_erp_sub">Plataforma multi-tenant · En producción</div>
+            <p data-i18n="proj_erp_p">Desarrollo full-stack en equipo de un ERP multi-tenant en producción para el sector hostelero: módulos de nóminas (recibos, importación Excel con control de periodos cerrados), fichaje con geolocalización y foto, gestión de empleados y mapas. Flujo de trabajo profesional: ramas por feature, pull requests, issues por ticket y revisión de código.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Django</span><span class="chip">React</span><span class="chip">TypeScript</span>
+              <span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">Celery</span>
+            </div>
+          </div>
 
 
           <div class="proj">
@@ -917,11 +992,26 @@
                 <a href="https://github.com/fvilpaz/MasterMind" target="_blank">GitHub ↗</a>
               </div>
             </div>
-            <div class="proj-sub">Plataforma de aprendizaje con IA · Modular · Google Cloud Run</div>
-            <p>Agente tutor construido sobre Gemini y Claude con arquitectura de cursos intercambiables: cada materia tiene su propio agente especializado. Actualmente lo uso para mi propia formación (CS50, MoureDev, 42, Google), pero el sistema está diseñado para escalar a cualquier contenido o estudiante. Login en dos pasos, modo invitado, sesiones con pomodoros y progresión adaptativa.</p>
+            <div class="proj-sub" data-i18n="proj_mm_sub">Plataforma de aprendizaje con IA · Modular · Google Cloud Run</div>
+            <p data-i18n="proj_mm_p">Agente tutor construido sobre Gemini y Claude con arquitectura de cursos intercambiables: cada materia tiene su propio agente especializado. Actualmente lo uso para mi propia formación (CS50, MoureDev, 42, Google), pero el sistema está diseñado para escalar a cualquier contenido o estudiante. Login en dos pasos, modo invitado, sesiones con pomodoros y progresión adaptativa.</p>
             <div class="chips">
               <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Gemini AI</span>
               <span class="chip">Claude API</span><span class="chip">Google Cloud Run</span><span class="chip">Cloudflare</span>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="proj-top">
+              <span class="proj-name">Gemini The Cosmic Runner</span>
+              <div class="proj-links">
+                <a href="https://gemini-the-cosmic-runner-225901143372.europe-west2.run.app/" target="_blank">Play ↗</a>
+                <a href="https://github.com/fvilpaz/cosmic-gemini-vibe" target="_blank">GitHub ↗</a>
+              </div>
+            </div>
+            <div class="proj-sub" data-i18n="proj_cosmic_sub">Juego con IA integrada · Google Cloud Run</div>
+            <p data-i18n="proj_cosmic_p">Juego interactivo de cuenta atrás construido y desplegado en Google Cloud Run con la API de Gemini: despliegue serverless, prompt engineering e integración de IA en tiempo real en un entorno gamificado.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Gemini AI</span><span class="chip">Google Cloud Run</span>
             </div>
           </div>
 
@@ -932,8 +1022,8 @@
                 <a href="https://github.com/fvilpaz/auryapp" target="_blank">GitHub ↗</a>
               </div>
             </div>
-            <div class="proj-sub">Beach club management · En producción · Google Cloud Run</div>
-            <p>App en uso real por la Maître de un club de playa. Dashboard con clima en vivo, gestión completa de
+            <div class="proj-sub" data-i18n="proj_aury_sub">Beach club management · En producción · Google Cloud Run</div>
+            <p data-i18n="proj_aury_p">App en uso real por la Maître de un club de playa. Dashboard con clima en vivo, gestión completa de
               eventos (bodas, galas, graduaciones) con documentos adjuntos, editor visual de plano de mesas (Fabric.js),
               cuadrante semanal con drag & drop, checklists por espacio, agenda con dictado por voz, pedidos por punto
               de venta y 6 temas visuales. Middleware de autenticación personalizado y bloqueo automático tras intentos
@@ -953,8 +1043,8 @@
                 <a href="https://github.com/fvilpaz/SoMeliaR" target="_blank">GitHub ↗</a>
               </div>
             </div>
-            <div class="proj-sub">Control de bodega + IA · Meliá Hotels</div>
-            <p>Gestión de stock de vinos con actualización en tiempo real por ventas, alertas por categoría, pedidos a
+            <div class="proj-sub" data-i18n="proj_somer_sub">Control de bodega + IA · Meliá Hotels</div>
+            <p data-i18n="proj_somer_p">Gestión de stock de vinos con actualización en tiempo real por ventas, alertas por categoría, pedidos a
               proveedor vía email y análisis predictivo de reposición con Google Gemini. Importación masiva via Excel.
             </p>
             <div class="chips">
@@ -971,8 +1061,8 @@
                 <a href="https://github.com/fvilpaz/N_Canitas" target="_blank">GitHub ↗</a>
               </div>
             </div>
-            <div class="proj-sub">Formación interna · Restaurante Estrella Michelin</div>
-            <p>Plataforma interactiva para el equipo de sala: carta, alérgenos, quizzes y certificación interna. Vanilla JS sin frameworks, diseñada con los constraints reales del cliente.</p>
+            <div class="proj-sub" data-i18n="proj_canitas_sub">Formación interna · Restaurante Estrella Michelin</div>
+            <p data-i18n="proj_canitas_p">Plataforma interactiva para el equipo de sala: carta, alérgenos, quizzes y certificación interna. Vanilla JS sin frameworks, diseñada con los constraints reales del cliente.</p>
             <div class="chips">
               <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span
                 class="chip">GitHub Pages</span>
@@ -987,8 +1077,8 @@
                 <a href="https://github.com/fvilpaz/redondela-automocion" target="_blank">GitHub ↗</a>
               </div>
             </div>
-            <div class="proj-sub">Presencia digital · Sector automoción</div>
-            <p>Plataforma digital para negocio real: catálogo de servicios, captación de clientes y gestión de citas.
+            <div class="proj-sub" data-i18n="proj_redondela_sub">Presencia digital · Sector automoción</div>
+            <p data-i18n="proj_redondela_p">Plataforma digital para negocio real: catálogo de servicios, captación de clientes y gestión de citas.
               Responsive, optimizado para conversión.</p>
             <div class="chips">
               <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span
@@ -999,26 +1089,26 @@
           <!-- 42 block -->
           <div class="proj-42">
             <div class="proj-name">42 Málaga — Core Curriculum</div>
-            <div class="proj-note">42 forma parte de mi historia, no de mi pasado. El modelo peer-to-peer y el trabajo
+            <div class="proj-note" data-i18n="proj_42_note">42 forma parte de mi historia, no de mi pasado. El modelo peer-to-peer y el trabajo
               sin tutoriales me enseñaron a descomponer problemas complejos en C: gestión de memoria, punteros,
               estructuras, señales UNIX, hardening de sistemas. Completé el Círculo 2 y tomé una decisión: había
               co-fundado una startup y tenía producto real que construir. El aprendizaje no paró.</div>
             <div class="grid-42">
               <div class="item-42">
                 <div class="item-42-name">Born2BeRoot</div>
-                <p>VM Linux endurecida con auditd, UFW, SSH y política de sudoers.</p>
+                <p data-i18n="item_b2br_p">VM Linux endurecida con auditd, UFW, SSH y política de sudoers.</p>
               </div>
               <div class="item-42">
                 <div class="item-42-name">libft</div>
-                <p>Reimplementación de la librería estándar de C desde cero.</p>
+                <p data-i18n="item_libft_p">Reimplementación de la librería estándar de C desde cero.</p>
               </div>
               <div class="item-42">
                 <div class="item-42-name">ft_printf · get_next_line</div>
-                <p>Printf custom con funciones variádicas. Lector de ficheros con buffers estáticos.</p>
+                <p data-i18n="item_printf_p">Printf custom con funciones variádicas. Lector de ficheros con buffers estáticos.</p>
               </div>
               <div class="item-42">
                 <div class="item-42-name">mini_talk · push_swap</div>
-                <p>Comunicación entre procesos via señales UNIX. Ordenación de stacks con instrucciones optimizadas.</p>
+                <p data-i18n="item_push_p">Comunicación entre procesos via señales UNIX. Ordenación de stacks con instrucciones optimizadas.</p>
               </div>
             </div>
           </div>
@@ -1026,15 +1116,15 @@
 
         <!-- BACKGROUND -->
         <section class="sec">
-          <div class="sec-label">Trayectoria</div>
+          <div class="sec-label" data-i18n="sec_background">Trayectoria</div>
 
           <div class="xp">
             <div class="xp-row">
-              <span class="xp-title">Sector servicios</span>
-              <span class="xp-date">2003 – actualidad</span>
+              <span class="xp-title" data-i18n="bg_title">Sector servicios</span>
+              <span class="xp-date" data-i18n="bg_date">2003 – actualidad</span>
             </div>
             <div class="xp-where">Londres → Galicia → Costa del Sol · Meliá, H10, Higuerón by Hilton</div>
-            <p>
+            <p data-i18n="bg_p">
               Emigré a Londres con 19 años. Empecé desde cero como camarero y fui ascendiendo
               hasta roles de responsabilidad en establecimientos de lujo: Pepe Vieira (Estrella Michelin),
               Higuerón by Hilton, H10, Meliá. Ese recorrido me enseñó a gestionar equipos, resolver
@@ -1081,68 +1171,68 @@
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label">Formación</div>
+          <div class="sb-label" data-i18n="sb_formacion">Formación</div>
 
           <div class="cert">
             <div class="cert-name">42 Málaga — Cursus</div>
-            <div class="cert-detail">Fundación Telefónica · C, sistemas, peer-to-peer</div>
-            <span class="badge done">Círculo 2 completado</span>
+            <div class="cert-detail" data-i18n="cert_42_detail">Fundación Telefónica · C, sistemas, peer-to-peer</div>
+            <span class="badge done" data-i18n="badge_42">Círculo 2 completado</span>
           </div>
 
           <div class="cert">
             <div class="cert-name">Cert. Profesionalidad IFCD0110</div>
-            <div class="cert-detail">Módulos 1, 2 y 3 ✓ · Prácticas pendientes</div>
-            <span class="badge wip">En curso</span>
+            <div class="cert-detail" data-i18n="cert_ifcd_detail">Módulos 1, 2 y 3 ✓ · Prácticas pendientes</div>
+            <span class="badge wip" data-i18n="badge_wip">En curso</span>
           </div>
 
           <div class="cert">
             <div class="cert-name">CS50x — Harvard / edX</div>
-            <div class="cert-detail">Introduction to Computer Science · C, memoria, punteros, SQL, Python</div>
-            <span class="badge wip">En curso</span>
+            <div class="cert-detail" data-i18n="cert_cs50_detail">Introduction to Computer Science · C, memoria, punteros, SQL, Python</div>
+            <span class="badge wip" data-i18n="badge_wip">En curso</span>
           </div>
 
           <div class="cert">
             <div class="cert-name">MoureDev Pro</div>
-            <div class="cert-detail">Java · Python · SQL · Git avanzado</div>
-            <span class="badge wip">En curso</span>
+            <div class="cert-detail" data-i18n="cert_mouredev_detail">Java · Python · SQL · Git avanzado</div>
+            <span class="badge wip" data-i18n="badge_wip">En curso</span>
           </div>
 
           <div class="cert">
-            <div class="cert-name">Google: IA y Productividad</div>
+            <div class="cert-name" data-i18n="cert_google_name">Google: IA y Productividad</div>
             <div class="cert-detail">Santander Open Academy · 2024</div>
-            <span class="badge done">✓ Completado</span>
+            <span class="badge done" data-i18n="badge_done">✓ Completado</span>
           </div>
 
           <div class="cert">
-            <div class="cert-name">Desarrollo con IA</div>
+            <div class="cert-name" data-i18n="cert_iabig_name">Desarrollo con IA</div>
             <div class="cert-detail">BIG school · 2025</div>
-            <span class="badge done">✓ Completado</span>
+            <span class="badge done" data-i18n="badge_done">✓ Completado</span>
           </div>
 
           <div class="cert">
-            <div class="cert-name">Desarrollo de Apps Móviles</div>
-            <div class="cert-detail">Universidad Complutense de Madrid · 2024</div>
-            <span class="badge done">✓ Completado</span>
+            <div class="cert-name" data-i18n="cert_mobile_name">Desarrollo de Apps Móviles</div>
+            <div class="cert-detail" data-i18n="cert_mobile_detail">Universidad Complutense de Madrid · 2024</div>
+            <span class="badge done" data-i18n="badge_done">✓ Completado</span>
           </div>
 
           <div class="cert">
-            <div class="cert-name">Ciberseguridad</div>
+            <div class="cert-name" data-i18n="cert_cyber_name">Ciberseguridad</div>
             <div class="cert-detail">Dabo Consulting · 2022</div>
-            <span class="badge done">✓ Completado</span>
+            <span class="badge done" data-i18n="badge_done">✓ Completado</span>
           </div>
 
           <div class="cert">
-            <div class="cert-name">C1 Inglés</div>
+            <div class="cert-name" data-i18n="cert_english_name">C1 Inglés</div>
             <div class="cert-detail">Dabo Consulting · 2022</div>
-            <span class="badge done">✓ Completado</span>
+            <span class="badge done" data-i18n="badge_done">✓ Completado</span>
           </div>
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label">Idiomas</div>
-          <div class="lang-row"><span>Español</span><span>Nativo</span></div>
-          <div class="lang-row"><span>Inglés</span><span>C1 · Profesional</span></div>
-          <div class="lang-row"><span>Francés</span><span>Intermedio</span></div>
+          <div class="sb-label" data-i18n="sb_idiomas">Idiomas</div>
+          <div class="lang-row"><span data-i18n="lang_es_name">Español</span><span data-i18n="lang_es_level">Nativo</span></div>
+          <div class="lang-row"><span data-i18n="lang_en_name">Inglés</span><span data-i18n="lang_en_level">C1 · Profesional</span></div>
+          <div class="lang-row"><span data-i18n="lang_fr_name">Francés</span><span data-i18n="lang_fr_level">Intermedio</span></div>
         </div>
 
         <div class="sb-sec">
@@ -1150,6 +1240,7 @@
           <div class="stags">
             <a href="https://www.upwork.com/freelancers/~015a2e9e2c5c9a95f6?viewMode=1" target="_blank" class="stag stag-upwork" style="text-decoration: none; cursor: pointer;">Upwork</a>
             <a href="http://www.fiverr.com/s/Gz7P8y0" target="_blank" class="stag stag-fiverr" style="text-decoration: none; cursor: pointer;">Fiverr</a>
+            <a href="https://www.malt.es/profile/fernandovilaspaz" target="_blank" class="stag stag-malt" style="text-decoration: none; cursor: pointer;">Malt</a>
           </div>
         </div>
 
@@ -1162,9 +1253,10 @@
       es: {
         contact_label: 'Contacto',
         header_available: 'Disponible · Presencial / Remoto',
+        tagline: 'Desarrollador Full Stack · Python · Django · React · Automatización para hostelería',
         location: 'Málaga, España',
         sec_perfil: 'Perfil',
-        perfil_p: 'Desarrollador Full Stack con formación en 42 Málaga y CS50 Harvard. Orientado a construir herramientas funcionales en entornos reales, con capacidad de adaptación a distintos stacks y contextos. Mentalidad de aprendizaje continuo y experiencia llevando proyectos de la idea a producción.',
+        perfil_p: 'Desarrollador Full Stack con más de 20 años previos en hostelería, parte en establecimientos de alto nivel: un sector que conozco desde dentro y que me permite construir software que resuelve problemas reales del negocio, no solo código. Trabajo con Python, Django, React y TypeScript, con la IA integrada en mi flujo de desarrollo. Formado en 42 Málaga y CS50 (Harvard). Disponible para proyectos freelance, de la idea a producción.',
         sec_proyectos: 'Proyectos',
         proj_freelance_name: 'Desarrollador Full Stack Freelance',
         proj_qreas_sub: 'Full Stack Developer · Soluciones a medida · 2024 – actualidad',
@@ -1179,6 +1271,11 @@
         proj_canitas_p: 'Plataforma interactiva para el equipo de sala: carta, alérgenos, quizzes y certificación interna. Vanilla JS sin frameworks, diseñada con los constraints reales del cliente.',
         proj_redondela_sub: 'Presencia digital · Sector automoción',
         proj_redondela_p: 'Plataforma digital para negocio real: catálogo de servicios, captación de clientes y gestión de citas. Responsive, optimizado para conversión.',
+        proj_erp_name: 'ERP para hostelería',
+        proj_erp_sub: 'Plataforma multi-tenant · En producción',
+        proj_erp_p: 'Desarrollo full-stack en equipo de un ERP multi-tenant en producción para el sector hostelero: módulos de nóminas (recibos, importación Excel con control de periodos cerrados), fichaje con geolocalización y foto, gestión de empleados y mapas. Flujo de trabajo profesional: ramas por feature, pull requests, issues por ticket y revisión de código.',
+        proj_cosmic_sub: 'Juego con IA integrada · Google Cloud Run',
+        proj_cosmic_p: 'Juego interactivo de cuenta atrás construido y desplegado en Google Cloud Run con la API de Gemini: despliegue serverless, prompt engineering e integración de IA en tiempo real en un entorno gamificado.',
         proj_42_note: '42 forma parte de mi historia, no de mi pasado. El modelo peer-to-peer y el trabajo sin tutoriales me enseñaron a descomponer problemas complejos en C: gestión de memoria, punteros, estructuras, señales UNIX, hardening de sistemas. Completé el Círculo 2 y tomé una decisión: había co-fundado una startup y tenía producto real que construir. El aprendizaje no paró.',
         item_b2br_p: 'VM Linux endurecida con auditd, UFW, SSH y política de sudoers.',
         item_libft_p: 'Reimplementación de la librería estándar de C desde cero.',
@@ -1191,6 +1288,8 @@
         sb_formacion: 'Formación',
         cert_42_detail: 'Fundación Telefónica · C, sistemas, peer-to-peer',
         badge_42: 'Círculo 2 completado',
+        badge_done: '✓ Completado',
+        badge_wip: 'En curso',
         cert_ifcd_detail: 'Módulos 1, 2 y 3 ✓ · Prácticas pendientes',
         cert_cs50_detail: 'Introduction to Computer Science · C, memoria, punteros, SQL, Python',
         cert_mouredev_detail: 'Java · Python · SQL · Git avanzado',
@@ -1211,9 +1310,10 @@
       en: {
         contact_label: 'Contact',
         header_available: 'Available · On-site / Remote',
+        tagline: 'Full Stack Developer · Python · Django · React · Automation for hospitality',
         location: 'Málaga, Spain',
         sec_perfil: 'Profile',
-        perfil_p: 'Full Stack Developer trained at 42 Málaga and CS50 Harvard. Focused on building functional tools in real environments, adaptable to different stacks and contexts. Continuous learning mindset with experience taking projects from idea to production.',
+        perfil_p: 'Full Stack Developer with over 20 years of prior experience in hospitality, part of it in high-end venues: a sector I know from the inside, which lets me build software that solves real business problems, not just code. I work with Python, Django, React and TypeScript, with AI integrated into my development workflow. Trained at 42 Málaga and CS50 (Harvard). Available for freelance projects, from idea to production.',
         sec_proyectos: 'Projects',
         proj_freelance_name: 'Freelance Full Stack Developer',
         proj_qreas_sub: 'Full Stack Developer · Custom solutions · 2024 – present',
@@ -1228,6 +1328,11 @@
         proj_canitas_p: 'Interactive platform for the floor team: menu, allergens, quizzes and internal certification. Vanilla JS without frameworks, designed around the client\'s real constraints.',
         proj_redondela_sub: 'Digital presence · Automotive sector',
         proj_redondela_p: 'Digital platform for a real business: service catalogue, lead generation and appointment management. Responsive, optimised for conversion.',
+        proj_erp_name: 'Hospitality ERP',
+        proj_erp_sub: 'Multi-tenant platform · In production',
+        proj_erp_p: 'Full-stack development, as part of a team, of a multi-tenant ERP in production for the hospitality sector: payroll modules (payslips, hardened Excel import with closed-period control), clock-in with geolocation and photo, employee management and maps. Professional workflow: feature branches, pull requests, ticket-based issues and code review.',
+        proj_cosmic_sub: 'AI-integrated game · Google Cloud Run',
+        proj_cosmic_p: 'Interactive countdown game built and deployed on Google Cloud Run with the Gemini API: serverless deployment, prompt engineering and real-time AI integration in a gamified environment.',
         proj_42_note: '42 is part of my story, not my past. The peer-to-peer model and tutorial-free work taught me to break down complex problems in C: memory management, pointers, data structures, UNIX signals, system hardening. I completed Circle 2 and made a decision: I had co-founded a startup and had a real product to build. The learning never stopped.',
         item_b2br_p: 'Hardened Linux VM with auditd, UFW, SSH and sudoers policy.',
         item_libft_p: 'Reimplementation of the C standard library from scratch.',
@@ -1240,6 +1345,8 @@
         sb_formacion: 'Education',
         cert_42_detail: 'Fundación Telefónica · C, systems, peer-to-peer',
         badge_42: 'Circle 2 completed',
+        badge_done: '✓ Completed',
+        badge_wip: 'In progress',
         cert_ifcd_detail: 'Modules 1, 2 & 3 ✓ · Internship pending',
         cert_cs50_detail: 'Introduction to Computer Science · C, memory, pointers, SQL, Python',
         cert_mouredev_detail: 'Java · Python · SQL · Advanced Git',
@@ -1261,87 +1368,15 @@
 
     let _lang = 'es';
 
-    function _sel(selector, idx) {
-      return document.querySelectorAll(selector)[idx] || null;
-    }
-
-    function _setText(el, text) {
-      if (el) el.textContent = text;
-    }
-
     function applyLang(lang) {
       const t = _t[lang];
 
-      // Header
-      _setText(_sel('.contact-label', 0), t.contact_label);
-      _setText(_sel('.header-available', 0), t.header_available);
-
-      // Location text node (span > span.dot + text)
-      const locSpan = document.querySelector('.contact-links > span');
-      if (locSpan && locSpan.lastChild && locSpan.lastChild.nodeType === 3)
-        locSpan.lastChild.textContent = t.location;
-
-      // Perfil
-      _setText(_sel('.sec-label', 0), t.sec_perfil);
-      _setText(_sel('.perfil-text', 0), t.perfil_p);
-
-      // Projects
-      _setText(_sel('.sec-label', 1), t.sec_proyectos);
-      _setText(_sel('.proj-name', 0), t.proj_freelance_name);
-      _setText(_sel('.proj-sub', 0), t.proj_qreas_sub);
-      _setText(_sel('.proj > p', 0), t.proj_qreas_p);
-      _setText(_sel('.proj-sub', 1), t.proj_mm_sub);
-      _setText(_sel('.proj > p', 1), t.proj_mm_p);
-      _setText(_sel('.proj-sub', 2), t.proj_aury_sub);
-      _setText(_sel('.proj > p', 2), t.proj_aury_p);
-      _setText(_sel('.proj-sub', 3), t.proj_somer_sub);
-      _setText(_sel('.proj > p', 3), t.proj_somer_p);
-      _setText(_sel('.proj-sub', 4), t.proj_canitas_sub);
-      _setText(_sel('.proj > p', 4), t.proj_canitas_p);
-      _setText(_sel('.proj-sub', 5), t.proj_redondela_sub);
-      _setText(_sel('.proj > p', 5), t.proj_redondela_p);
-      _setText(_sel('.proj-note', 0), t.proj_42_note);
-      _setText(_sel('.item-42 p', 0), t.item_b2br_p);
-      _setText(_sel('.item-42 p', 1), t.item_libft_p);
-      _setText(_sel('.item-42 p', 2), t.item_printf_p);
-      _setText(_sel('.item-42 p', 3), t.item_push_p);
-
-      // Background section label
-      _setText(_sel('.sec-label', 2), t.sec_background);
-
-      // Background
-      _setText(_sel('.xp-title', 0), t.bg_title);
-      _setText(_sel('.xp-date', 0), t.bg_date);
-      _setText(_sel('.xp p', 0), t.bg_p);
-
-      // Sidebar – Education
-      _setText(_sel('.sb-label', 1), t.sb_formacion);
-      _setText(_sel('.cert-detail', 0), t.cert_42_detail);
-      document.querySelectorAll('.badge.done').forEach((el, i) => {
-        el.textContent = i === 0 ? t.badge_42 : (lang === 'en' ? '✓ Completed' : '✓ Completado');
+      // Cada elemento se traduce por su atributo data-i18n (sin contar posiciones).
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const v = t[el.dataset.i18n];
+        if (v != null) el.textContent = v;
       });
-      document.querySelectorAll('.badge.wip').forEach(el => el.textContent = lang === 'en' ? 'In progress' : 'En curso');
-      _setText(_sel('.cert-detail', 1), t.cert_ifcd_detail);
-      _setText(_sel('.cert-detail', 2), t.cert_cs50_detail);
-      _setText(_sel('.cert-detail', 3), t.cert_mouredev_detail);
-      _setText(_sel('.cert-name', 4), t.cert_google_name);
-      _setText(_sel('.cert-name', 5), t.cert_iabig_name);
-      _setText(_sel('.cert-name', 6), t.cert_mobile_name);
-      _setText(_sel('.cert-detail', 6), t.cert_mobile_detail);
-      _setText(_sel('.cert-name', 7), t.cert_cyber_name);
-      _setText(_sel('.cert-name', 8), t.cert_english_name);
 
-      // Sidebar – Languages
-      _setText(_sel('.sb-label', 2), t.sb_idiomas);
-      const langSpans = document.querySelectorAll('.lang-row span');
-      _setText(langSpans[0], t.lang_es_name);
-      _setText(langSpans[1], t.lang_es_level);
-      _setText(langSpans[2], t.lang_en_name);
-      _setText(langSpans[3], t.lang_en_level);
-      _setText(langSpans[4], t.lang_fr_name);
-      _setText(langSpans[5], t.lang_fr_level);
-
-      // Update html lang attr and button label
       document.documentElement.lang = lang;
       document.getElementById('lang-label').textContent = lang === 'es' ? 'EN' : 'ES';
     }
