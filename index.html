@@ -132,7 +132,7 @@
     .header {
       display: grid;
       grid-template-columns: 1fr 280px 200px;
-      border-bottom: 2px solid #eceae4;
+      border-bottom: 2px solid var(--rule);
     }
 
     .header-name {
@@ -172,7 +172,7 @@
       flex-direction: column;
       justify-content: center;
       background-color: var(--bg-contact);
-      border-right: 2px solid #eceae4;
+      border-right: 2px solid var(--rule);
     }
 
     .contact-label {
@@ -1229,6 +1229,14 @@
         </div>
 
         <div class="sb-sec">
+          <div class="sb-label" data-i18n="sb_program">Programa</div>
+          <div class="cert">
+            <div class="cert-name">Google Developer Program · Premium</div>
+            <div class="cert-detail" data-i18n="program_detail">Google I/O '25 &amp; '26 · ecosistema Gemini / Cloud</div>
+          </div>
+        </div>
+
+        <div class="sb-sec">
           <div class="sb-label" data-i18n="sb_idiomas">Idiomas</div>
           <div class="lang-row"><span data-i18n="lang_es_name">Español</span><span data-i18n="lang_es_level">Nativo</span></div>
           <div class="lang-row"><span data-i18n="lang_en_name">Inglés</span><span data-i18n="lang_en_level">C1 · Profesional</span></div>
@@ -1299,6 +1307,8 @@
         cert_mobile_detail: 'Universidad Complutense de Madrid · 2024',
         cert_cyber_name: 'Ciberseguridad',
         cert_english_name: 'C1 Inglés',
+        sb_program: 'Programa',
+        program_detail: "Google I/O '25 & '26 · ecosistema Gemini / Cloud",
         sb_idiomas: 'Idiomas',
         lang_es_name: 'Español',
         lang_es_level: 'Nativo',
@@ -1356,6 +1366,8 @@
         cert_mobile_detail: 'Complutense University of Madrid · 2024',
         cert_cyber_name: 'Cybersecurity',
         cert_english_name: 'C1 English',
+        sb_program: 'Program',
+        program_detail: "Google I/O '25 & '26 · Gemini / Cloud ecosystem",
         sb_idiomas: 'Languages',
         lang_es_name: 'Spanish',
         lang_es_level: 'Native',
