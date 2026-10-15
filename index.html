@@ -817,6 +817,17 @@
         padding: 16px;
       }
 
+      /* Avoid breaking projects across pages */
+      @media print {
+        .proj {
+          page-break-inside: avoid;
+        }
+
+        .proj-42 {
+          page-break-inside: avoid;
+        }
+      }
+
       .xp-item {
         margin-bottom: 12px;
       }
