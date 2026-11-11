@@ -67,6 +67,8 @@
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Geist+Mono:wght@300;400;500&display=swap"
     rel="stylesheet">
   <style>
+    /* Encabezados semánticos (h1-h3) con el aspecto de siempre: sin el estilo por defecto del navegador */
+    h1, h2, h3 { margin: 0; font: inherit; }
     :root {
       --ink: #111318;
       --paper: #fafaf8;
@@ -933,7 +935,7 @@
     <!-- HEADER -->
     <div class="header">
       <div class="header-name">
-        <div class="name">Fernando<br><span class="name-accent">Vilas Paz</span></div>
+        <h1 class="name">Fernando<br><span class="name-accent">Vilas Paz</span></h1>
         <div class="tagline" data-i18n="tagline">Desarrollador Full Stack · Python · Django · React · Automatización para hostelería</div>
       </div>
       <div class="header-contact">
@@ -960,17 +962,17 @@
 
         <!-- PERFIL -->
         <section class="sec">
-          <div class="sec-label" data-i18n="sec_perfil">Perfil</div>
+          <h2 class="sec-label" data-i18n="sec_perfil">Perfil</h2>
           <p class="perfil-text" data-i18n="perfil_p">Desarrollador Full Stack con más de 20 años previos en hostelería, parte en establecimientos de alto nivel: un sector que conozco desde dentro y que me permite construir software que resuelve problemas reales del negocio, no solo código. Trabajo con Python, Django, React y TypeScript, con la IA integrada en mi flujo de desarrollo. Formado en 42 Málaga y CS50 (Harvard). Disponible para proyectos freelance, de la idea a producción.</p>
         </section>
 
         <!-- PROYECTOS -->
         <section class="sec">
-          <div class="sec-label" data-i18n="sec_proyectos">Proyectos</div>
+          <h2 class="sec-label" data-i18n="sec_proyectos">Proyectos</h2>
 
 <div class="proj">
   <div class="proj-top">
-    <span class="proj-name" data-i18n="proj_freelance_name">Desarrollador Full Stack Freelance</span>
+    <h3 class="proj-name" data-i18n="proj_freelance_name">Desarrollador Full Stack Freelance</h3>
     <div class="proj-links"></div>
   </div>
   <div class="proj-sub" data-i18n="proj_qreas_sub">Full Stack Developer · Soluciones a medida · 2024 – actualidad</div>
@@ -983,7 +985,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">MasterMind</span>
+              <h3 class="proj-name">MasterMind</h3>
               <div class="proj-links">
                 <a href="https://fv-mastermind.com" target="_blank">Live ↗</a>
               </div>
@@ -998,7 +1000,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">Gemini The Cosmic Runner</span>
+              <h3 class="proj-name">Gemini The Cosmic Runner</h3>
               <div class="proj-links">
                 <a href="https://gemini-the-cosmic-runner-225901143372.europe-west2.run.app/" target="_blank">Play ↗</a>
               </div>
@@ -1012,7 +1014,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">Cañitas Maite · Training Platform</span>
+              <h3 class="proj-name">Cañitas Maite · Training Platform</h3>
               <div class="proj-links">
                 <a href="https://fvilpaz.github.io/N_Canitas/" target="_blank">Demo ↗</a>
               </div>
@@ -1027,7 +1029,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">Redondela Automoción</span>
+              <h3 class="proj-name">Redondela Automoción</h3>
               <div class="proj-links">
                 <a href="https://fvilpaz.github.io/redondela-automocion/" target="_blank">Demo ↗</a>
               </div>
@@ -1043,7 +1045,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">SoMeliaR</span>
+              <h3 class="proj-name">SoMeliaR</h3>
               <div class="proj-links"></div>
             </div>
             <div class="proj-sub" data-i18n="proj_somer_sub">Control de bodega + IA · Meliá Hotels</div>
@@ -1058,7 +1060,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name" data-i18n="proj_erp_name">ERP para hostelería</span>
+              <h3 class="proj-name" data-i18n="proj_erp_name">ERP para hostelería</h3>
               <div class="proj-links"></div>
             </div>
             <div class="proj-sub" data-i18n="proj_erp_sub">Plataforma multi-tenant · En producción</div>
@@ -1071,7 +1073,7 @@
 
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">AuryApp</span>
+              <h3 class="proj-name">AuryApp</h3>
               <div class="proj-links"></div>
             </div>
             <div class="proj-sub" data-i18n="proj_aury_sub">Beach club management · En producción · Google Cloud Run</div>
@@ -1090,7 +1092,7 @@
 
           <!-- 42 block -->
           <div class="proj-42">
-            <div class="proj-name">42 Málaga — Core Curriculum</div>
+            <h3 class="proj-name">42 Málaga — Core Curriculum</h3>
             <div class="proj-note" data-i18n="proj_42_note">42 forma parte de mi historia, no de mi pasado. El modelo peer-to-peer y el trabajo
               sin tutoriales me enseñaron a descomponer problemas complejos en C: gestión de memoria, punteros,
               estructuras, señales UNIX, hardening de sistemas. Completé el Círculo 2 y tomé una decisión: había
@@ -1118,7 +1120,7 @@
 
         <!-- BACKGROUND -->
         <section class="sec">
-          <div class="sec-label" data-i18n="sec_background">Trayectoria</div>
+          <h2 class="sec-label" data-i18n="sec_background">Trayectoria</h2>
 
           <div class="xp">
             <div class="xp-row">
@@ -1142,7 +1144,7 @@
       <aside class="sidebar">
 
         <div class="sb-sec">
-          <div class="sb-label">Stack</div>
+          <h2 class="sb-label">Stack</h2>
           <div class="skill-cat">Systems & Low Level</div>
           <div class="stags">
             <span class="stag stag-c">C</span>
@@ -1173,7 +1175,7 @@
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label" data-i18n="sb_formacion">Formación</div>
+          <h2 class="sb-label" data-i18n="sb_formacion">Formación</h2>
 
           <div class="cert">
             <div class="cert-name">42 Málaga — Cursus</div>
@@ -1231,7 +1233,7 @@
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label" data-i18n="sb_program">Programa</div>
+          <h2 class="sb-label" data-i18n="sb_program">Programa</h2>
           <div class="cert">
             <div class="cert-name">Google Developer Program · Premium</div>
             <div class="cert-detail" data-i18n="program_detail">Google I/O '25 &amp; '26 · ecosistema Gemini / Cloud</div>
@@ -1239,14 +1241,14 @@
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label" data-i18n="sb_idiomas">Idiomas</div>
+          <h2 class="sb-label" data-i18n="sb_idiomas">Idiomas</h2>
           <div class="lang-row"><span data-i18n="lang_es_name">Español</span><span data-i18n="lang_es_level">Nativo</span></div>
           <div class="lang-row"><span data-i18n="lang_en_name">Inglés</span><span data-i18n="lang_en_level">C1 · Profesional</span></div>
           <div class="lang-row"><span data-i18n="lang_fr_name">Francés</span><span data-i18n="lang_fr_level">Intermedio</span></div>
         </div>
 
         <div class="sb-sec">
-          <div class="sb-label">Freelance</div>
+          <h2 class="sb-label">Freelance</h2>
           <div class="stags">
             <a href="https://www.upwork.com/freelancers/~015a2e9e2c5c9a95f6?viewMode=1" target="_blank" class="stag stag-upwork" style="text-decoration: none; cursor: pointer;">Upwork</a>
             <a href="http://www.fiverr.com/s/Gz7P8y0" target="_blank" class="stag stag-fiverr" style="text-decoration: none; cursor: pointer;">Fiverr</a>
